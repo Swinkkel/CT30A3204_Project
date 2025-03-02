@@ -1,11 +1,7 @@
 // Routes to /api/baords end points
-import {Request, Response, Router} from "express"
-import bcrypt from "bcrypt"
-import { compile } from "morgan"
-import jwt, {JwtPayload} from "jsonwebtoken"
-import {body, validationResult} from 'express-validator'
+import {Response, Router} from "express"
 import {Board} from "../models/Boards"
-import { validateUser, validateAdmin, CustomRequest } from '../middleware/validateToken';
+import { validateUser, CustomRequest } from '../middleware/validateToken';
 
 const boardsRouter: Router = Router()
 

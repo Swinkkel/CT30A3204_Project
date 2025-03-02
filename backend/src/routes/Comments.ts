@@ -1,7 +1,7 @@
 // Routes to /api/comments end points. Not implemented yet.
 import {Request, Response, Router} from "express"
 import {Board} from "../models/Boards"
-import { validateUser, validateAdmin, CustomRequest } from '../middleware/validateToken';
+import { validateUser, CustomRequest } from '../middleware/validateToken';
 
 const commentsRouter: Router = Router()
 

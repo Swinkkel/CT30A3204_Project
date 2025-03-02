@@ -1,6 +1,6 @@
 // Routes to /api/baords end points
 import {Request, Response, Router} from "express"
-import jwt, {JwtPayload} from "jsonwebtoken"
+import jwt from "jsonwebtoken"
 
 const authRouter: Router = Router()
 

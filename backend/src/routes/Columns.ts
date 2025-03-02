@@ -1,11 +1,8 @@
 // Routes to /api/columns end points
 import {Request, Response, Router} from "express"
-import bcrypt from "bcrypt"
 import { compile } from "morgan"
-import jwt, {JwtPayload} from "jsonwebtoken"
-import {body, validationResult} from 'express-validator'
 import {Column} from "../models/Columns"
-import { validateUser, validateAdmin, CustomRequest } from '../middleware/validateToken';
+import { validateUser, CustomRequest } from '../middleware/validateToken';
 
 const columnsRouter: Router = Router()
 

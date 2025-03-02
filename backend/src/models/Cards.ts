@@ -1,5 +1,6 @@
 import mongoose, {Document, Schema, Types} from "mongoose";
 
+// Interface for a Card document in MongoDB.
 interface ICard extends Document {
     title: string;
     content: string;
@@ -12,6 +13,7 @@ interface ICard extends Document {
     updatedAt: Date;
 }
 
+// Schema for Card collection
 const cardSchema: Schema = new Schema({
     title: {type: String, required: true, unique: true},
     content:  {type: String, required: true},
@@ -23,6 +25,7 @@ const cardSchema: Schema = new Schema({
     { timestamps: true}
  )
 
+ // Model for the cards collection.
 const Card: mongoose.Model<ICard> = mongoose.model<ICard>("Cards", cardSchema)
 
 export {Card}

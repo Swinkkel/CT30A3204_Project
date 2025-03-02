@@ -1,5 +1,6 @@
 import mongoose, {Document, Schema} from "mongoose";
 
+// Interface for a User document in MongoDB.
 interface IUser extends Document {
     email: string;
     password: string;
@@ -8,6 +9,7 @@ interface IUser extends Document {
     isAdmin?: boolean;
 }
 
+// Schema for User collection
 const userSchema: Schema = new Schema({
     email: {type: String, required: true, unique: true},
     password:  {type: String, required: true},
@@ -16,6 +18,7 @@ const userSchema: Schema = new Schema({
     isAdmin: {type: Boolean, default: false}
 })
 
+// Model for the user collection.
 const User: mongoose.Model<IUser> = mongoose.model<IUser>("User", userSchema)
 
 export {User}
